@@ -4,15 +4,15 @@
 include $(ADK_TOPDIR)/rules.mk
 
 PKG_NAME:=		dropbear
-PKG_VERSION:=		2024.85
+PKG_VERSION:=		2024.85-patches
 PKG_RELEASE:=		1
-PKG_HASH:=		86b036c433a69d89ce51ebae335d65c47738ccf90d13e5eb0fea832e556da502
+PKG_HASH:=		07ccea8c093bae04a91ac3bf83df2bd2e7e1da616954a589ab5c27899a768e57
 PKG_DESCR:=		ssh server/client designed for embedded systems
 PKG_SECTION:=		net/security
 PKG_URL:=		http://matt.ucc.asn.au/dropbear/
-PKG_SITES:=		http://matt.ucc.asn.au/dropbear/releases/
+PKG_SITES:=		https://github.com/rgerganov/dropbear/archive/refs/tags/
 
-DISTFILES:=		${PKG_NAME}-${PKG_VERSION}.tar.bz2
+DISTFILES:=		${PKG_VERSION}.tar.gz
 
 PKG_SUBPKGS:=		DROPBEAR DBCONVERT
 PKGSD_DBCONVERT:=	utility for converting ssh private keys
